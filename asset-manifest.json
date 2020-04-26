@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/piratesofthedelaware/static/css/main.5f361e03.chunk.css",
-    "main.js": "/piratesofthedelaware/static/js/main.16218a39.chunk.js",
-    "main.js.map": "/piratesofthedelaware/static/js/main.16218a39.chunk.js.map",
-    "runtime-main.js": "/piratesofthedelaware/static/js/runtime-main.750bbeeb.js",
-    "runtime-main.js.map": "/piratesofthedelaware/static/js/runtime-main.750bbeeb.js.map",
-    "static/js/2.8cc6854a.chunk.js": "/piratesofthedelaware/static/js/2.8cc6854a.chunk.js",
-    "static/js/2.8cc6854a.chunk.js.map": "/piratesofthedelaware/static/js/2.8cc6854a.chunk.js.map",
-    "index.html": "/piratesofthedelaware/index.html",
-    "precache-manifest.396dcc976723ab94f41e8e7c0ca9bf3c.js": "/piratesofthedelaware/precache-manifest.396dcc976723ab94f41e8e7c0ca9bf3c.js",
-    "service-worker.js": "/piratesofthedelaware/service-worker.js",
-    "static/css/main.5f361e03.chunk.css.map": "/piratesofthedelaware/static/css/main.5f361e03.chunk.css.map",
-    "static/js/2.8cc6854a.chunk.js.LICENSE.txt": "/piratesofthedelaware/static/js/2.8cc6854a.chunk.js.LICENSE.txt",
-    "static/media/compass.png": "/piratesofthedelaware/static/media/compass.b4985ee9.png",
-    "static/media/logo.svg": "/piratesofthedelaware/static/media/logo.5d5d9eef.svg"
+    "main.css": "/static/css/main.5f361e03.chunk.css",
+    "main.js": "/static/js/main.c0664b17.chunk.js",
+    "main.js.map": "/static/js/main.c0664b17.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.bc71c388.js",
+    "runtime-main.js.map": "/static/js/runtime-main.bc71c388.js.map",
+    "static/js/2.8cc6854a.chunk.js": "/static/js/2.8cc6854a.chunk.js",
+    "static/js/2.8cc6854a.chunk.js.map": "/static/js/2.8cc6854a.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.97b035b22b02ba20960814a8cdb1adc4.js": "/precache-manifest.97b035b22b02ba20960814a8cdb1adc4.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.8cc6854a.chunk.js.LICENSE.txt": "/static/js/2.8cc6854a.chunk.js.LICENSE.txt",
+    "static/media/compass.png": "/static/media/compass.b4985ee9.png",
+    "static/media/logo.svg": "/static/media/logo.5d5d9eef.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.750bbeeb.js",
+    "static/js/runtime-main.bc71c388.js",
     "static/js/2.8cc6854a.chunk.js",
     "static/css/main.5f361e03.chunk.css",
-    "static/js/main.16218a39.chunk.js"
+    "static/js/main.c0664b17.chunk.js"
   ]
 }
