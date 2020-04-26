@@ -30,7 +30,6 @@ function App() {
         </p>
         <p>coming soon</p>
       </header>
-      <Route exact path={'/'} component={Home} />
     </div>
   );
 }
