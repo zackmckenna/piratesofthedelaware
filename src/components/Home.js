@@ -5,7 +5,7 @@ import '../App.css';
 function Home() {
   return (
     <div className="App">
-        <img src={compass} className="App-logo" alt="logo" />
+        <img style={{ marginTop: '3em'}} src={compass} className="App-logo" alt="logo" />
         <p>
           piratesofthedelaware.com
         </p>
