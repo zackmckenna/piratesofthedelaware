@@ -1,7 +1,6 @@
 import React from 'react';
-import logo from './logo.svg';
-import compass from './compass.png'
-import './App.css';
+import compass from '../compass.png'
+import '../App.css';
 
 function Home() {
   return (
