@@ -5,13 +5,11 @@ import '../App.css';
 function Home() {
   return (
     <div className="App">
-      <header className="App-header">
         <img src={compass} className="App-logo" alt="logo" />
         <p>
-          PIRATES OF THE DELAWARE
+          piratesofthedelaware.com
         </p>
-        <p>coming soon</p>
-      </header>
+        <p>coming soon to a river near you</p>
     </div>
   );
 }
