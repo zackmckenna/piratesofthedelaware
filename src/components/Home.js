@@ -310,14 +310,14 @@ function Home() {
                 </Col>
               </Row>
             </div>
-            <Jumbotron className='mt-4'>
+            {/* <Jumbotron className='mt-4'>
               <Row>
                 <Col>
                   <h1>DRIVERS</h1>
                   <p>Please be careful on the drive home. The exhaustion is real, so make sure you either get ample caffeine or pull over if you're not feeling 100% awake.</p>
                 </Col>
               </Row>
-            </Jumbotron>
+            </Jumbotron> */}
             </Container>
           </>
         }
