@@ -1,10 +1,42 @@
 .App {
   text-align: center;
+  /* background-color: #D9E5D6; */
+}
+.App-logo {
+  height: 10vmin;
+  pointer-events: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo {
+  height: 5vmin;
+}
+
+.rowdies {
+  font-family: 'Rowdies', cursive;
+}
+
+.cedar {
+  font-family: 'Cedarville Cursive', cursive;
+}
+
+.try-again {
+  color: red;
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+}
+100% {
+    opacity: 1;
+ }
+}
+
+.gotisch {
+  font-family: 'Grenze Gotisch', cursive;
 }
 
 @media (prefers-reduced-motion: no-preference) {
