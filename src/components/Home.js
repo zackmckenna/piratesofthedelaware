@@ -75,7 +75,7 @@ function Home() {
         </Row>
       </>
     }
-        {/* {userInput === password && */}
+        {userInput === password &&
           <>
             <Jumbotron fluid style={{ backgroundColor: "#00A7E1"}}>
                 <h1 style={{fontSize: '20vmin'}} className='rowdies text-light'>POTD</h1>
@@ -320,7 +320,7 @@ function Home() {
               </Row>
             </Jumbotron> */}
           </>
-        {/* } */}
+        }
     </Container>
     </div>
   );
