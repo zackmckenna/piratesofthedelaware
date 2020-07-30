@@ -2,15 +2,24 @@ import React, { useState, useEffect } from 'react';
 import compass from '../compass.png'
 import '../App.css';
 import { Nav, Accordion, ButtonGroup, Button, Card, Jumbotron, Container, Row, Col } from 'react-bootstrap'
+import boat from '../pictures/pirate.png'
+import skull from '../pictures/death.png'
+import wheel from '../pictures/rudder.png'
+import sword from '../pictures/sword.png'
 
-const HeaderRow = ({ contents }) => {
+const HeaderRow = ({ contents, location }) => {
   return (
     <Row className="mt-3 mb-3 justify-content-md-center">
-      <Col sm={12} md={6} className="rounded bg-dark p-2">
-        <h1 className="rowdies text-light">{contents}</h1>
+      <Col sm={12} md={6} className="pirata rounded bg-dark p-2">
+        <h1 style={{ fontSize: '4em' }} className="text-light">{contents}</h1>
+        <h6 style={{ fontSize: '1.5em' }} className="rowdies text-light">{location}</h6>
       </Col>
     </Row>
   )
+}
+
+const Icon = ({ src }) => {
+  return (<img style={{ color: 'white', height: '40px', width: '40px'}} src={src}></img>)
 }
 
 function Home() {
@@ -19,39 +28,42 @@ function Home() {
   const [wordTwo, setWordTwo] = useState("two")
   const [wordThree, setWordThree] = useState("three")
   const [wordFour, setWordFour] = useState("four")
-  const [password, setPassword] = useState(" one two three four")
+  const [password, setPassword] = useState(" wheel ship skull sword")
   const [userInput, setUserInput] = useState("")
   const [increment, setIncrement] = useState(0)
 
-  const handlePasswordButtonPress = async (e) => {
+  const clearInput = (time) => {
+    setTimeout(() => {
+      setUserInput('')
+      setIncrement(0)
+    }, time)
+  }
+
+  const handlePasswordButtonPress = async (button) => {
     setIncrement(increment + 1)
     console.log(increment)
     if(increment > 3){
       setUserInput('try again')
-      setTimeout(() => {
-        setUserInput('')
-        setIncrement(0)
-      }, 2000)
+      clearInput(1000)
     } else {
-      e.preventDefault()
-      console.log(e.target.value)
-      setUserInput(userInput + ` ${e.target.value}`)
-      console.log(userInput)
+      setUserInput(userInput + ` ${button}`)
     }
   }
 
   return (
     <div className="App">
+    <Container>
+
     {userInput !== password &&
       <>
-        <Row className="mx-auto">
+        <Row style={{ marginTop: '10em'}} className="mx-auto">
           <Col className="mx-auto">
             <div className="rounded p-3 mt-3">
               <ButtonGroup size="lg" className="mb-2">
-                <Button onClick={(e) => handlePasswordButtonPress(e)} value={wordOne} className="btn-warning" variant="outline-dark">{wordOne}</Button>
-                <Button onClick={(e) => handlePasswordButtonPress(e)} value={wordTwo} className="btn-danger" variant="outline-dark">{wordTwo}</Button>
-                <Button onClick={(e) => handlePasswordButtonPress(e)} value={wordThree} variant="outline-dark" className="btn-info">{wordThree}</Button>
-                <Button onClick={(e) => handlePasswordButtonPress(e)} value={wordFour} className="btn-success" variant="outline-dark">{wordFour}</Button>
+                <Button onClick={() => handlePasswordButtonPress("ship")} data_value={wordOne} className="btn-warning" variant="outline-dark"><img style={{ color: 'white', height: '40px', width: '40px'}} src={boat}></img></Button>
+                <Button onClick={() => handlePasswordButtonPress("skull")} value={wordTwo} className="btn-danger" variant="outline-dark"><Icon src={skull}/></Button>
+                <Button onClick={() => handlePasswordButtonPress("wheel")} value={wordThree} variant="outline-dark" className="btn-info"><Icon src={wheel}/></Button>
+                <Button onClick={() => handlePasswordButtonPress("sword")} value={wordFour} className="btn-success" variant="outline-dark"><Icon src={sword}/> </Button>
               </ButtonGroup>
             </div>
           </Col>
@@ -63,35 +75,24 @@ function Home() {
         </Row>
       </>
     }
-        {userInput === password &&
+        {/* {userInput === password && */}
           <>
-            <Jumbotron style={{ backgroundColor: "#00A7E1"}} fluid>
-              <Container>
+            <Jumbotron fluid style={{ backgroundColor: "#00A7E1"}}>
                 <h1 style={{fontSize: '20vmin'}} className='rowdies text-light'>POTD</h1>
                 <h1 style={{fontSize: "5vmin"}} className="rowdies text-light">a quick reference</h1>
                 {/* <p className='cedar'
                   for your reference and considarration
                 </p> */}
-              </Container>
             {/* <img src={compass} className="App-logo" alt="logo" /> */}
             </Jumbotron>
-            <Container>
-            <Jumbotron className='bg-white border border-warning'>
-              <Row>
-                <Col className="mt-4">
+              {/* <Row>
+                <Col>
                   <div>
-                    <h1 style={{fontSize: '20vmin', color: "#FF9B42"}} className="cedar">ahoy!</h1>
+                    <h1 style={{marginTop: '100px', marginBottom: '100px', fontSize: '20vmin', color: "#FF9B42"}} className="pirata">ahoy!</h1>
+                    <h6></h6>
                   </div>
                 </Col>
-              </Row>
-              <Row className='justify-content-center'>
-                <Col md={6}>
-                  <div>
-                    <p>This is only a quick reference guide, check out/download/print the full "link to google doc" for more detailed information</p>
-                  </div>
-                </Col>
-              </Row>
-            </Jumbotron>
+              </Row> */}
             {/* <Row>
               <Col style={{ marginTop: '50px', marginBottom: '50px'}}>
                 <div>
@@ -102,16 +103,16 @@ function Home() {
             <Jumbotron >
             <Row style={{ marginBottom: '20px'}}>
               <Col>
-                  <strong><h1 className='rowdies'>THE JOURNEY</h1></strong>
+                  <strong><h1 style={{ fontSize: '4em'}} className='pirata'>THE JOURNEY</h1></strong>
               </Col>
             </Row>
             <Row>
               <Col style={{ padding: '0px'}}>
                 <Card className='mx-auto mb-3' style={{ padding: '0', width: '18rem' }}>
                   <Card.Body style={{borderWidth: '3px'}} className='border border-info'>
-                    <Card.Title>DEPARTURE:</Card.Title>
+                    <Card.Title className="rowdies">SETTING SAIL</Card.Title>
                     <Card.Text >
-                      The voyage begins at <Nav.Link target="_blank" href="https://goo.gl/maps/x5Htv7hccDxTCuTP7">Kingswood Boat Access</Nav.Link>
+                      The voyage begins at <Nav.Link target="_blank" href="https://goo.gl/maps/x5Htv7hccDxTCuTP7">Kingwood Access Boat Launch</Nav.Link>
                     </Card.Text>
                   </Card.Body>
                 </Card>
@@ -119,7 +120,7 @@ function Home() {
               <Col style={{ padding: '0px'}}>
                 <Card className='mx-auto mb-3' style={{ padding: '0',width: '18rem' }}>
                 <Card.Body className='border border-warning'>
-                  <Card.Title>PORT:</Card.Title>
+                  <Card.Title className="rowdies">PORT</Card.Title>
                   <Card.Text>
                     We camp overnight on <Nav.Link target="_blank" href="https://goo.gl/maps/NFpd1AmyePXL8w5x7">Hendrick Island</Nav.Link>
                   </Card.Text>
@@ -129,7 +130,7 @@ function Home() {
               <Col className='mx-auto justify-center' style={{ padding: '0px'}}>
                 <Card className='mx-auto mb-3' style={{ padding: '0', width: '18rem' }}>
                   <Card.Body className='border border-success'>
-                    <Card.Title>ARRIVAL:</Card.Title>
+                    <Card.Title className="rowdies">ARRIVAL</Card.Title>
                     <Card.Text>
                       The voyage ends at <Nav.Link target="_blank" href="https://goo.gl/maps/vLen4hsapc6wpdfJ7">Lambertville Boat Ramp</Nav.Link>
                     </Card.Text>
@@ -139,10 +140,10 @@ function Home() {
             </Row>
             </Jumbotron>
             <div style={{marginTop: '20px'}} className='bg-info rounded border p-3'>
-              <HeaderRow contents={'DEPARTURE'}/>
+              <HeaderRow contents={'SETTING SAIL'} location={"Kingswood Access Boat Launch"}/>
               <Row className="mt-3 mb-3">
                 <Col className='text-light'>
-                  <h3>Set sail at 11AM</h3>
+                  <h4>Set sail at 11:00</h4>
                 </Col>
               </Row>
               <Row className="mt-3 mb-3 justify-content-md-center">
@@ -151,7 +152,7 @@ function Home() {
                     <Card>
                       <Card.Header>
                         <Accordion.Toggle as={Button} variant="link" eventKey="0">
-                          1: Vehicles
+                          Vehicles
                         </Accordion.Toggle>
                       </Card.Header>
                       <Accordion.Collapse eventKey="0">
@@ -161,7 +162,7 @@ function Home() {
                     <Card>
                       <Card.Header>
                         <Accordion.Toggle as={Button} variant="link" eventKey="1">
-                          2: Contraband
+                          Contraband
                         </Accordion.Toggle>
                       </Card.Header>
                       <Accordion.Collapse eventKey="1">
@@ -171,7 +172,7 @@ function Home() {
                     <Card>
                       <Card.Header>
                         <Accordion.Toggle as={Button} variant="link" eventKey="2">
-                          3: Space
+                          Space
                         </Accordion.Toggle>
                       </Card.Header>
                       <Accordion.Collapse eventKey="2">
@@ -181,7 +182,7 @@ function Home() {
                     <Card>
                       <Card.Header>
                         <Accordion.Toggle as={Button} variant="link" eventKey="3">
-                          4: Setting Sail
+                          Setting Sail
                         </Accordion.Toggle>
                       </Card.Header>
                       <Accordion.Collapse eventKey="3">
@@ -193,10 +194,10 @@ function Home() {
               </Row>
             </div>
             <div style={{marginTop: '20px'}} className='bg-warning rounded border p-3'>
-              <HeaderRow  contents={'PORT'}/>
+              <HeaderRow  contents={'PORT'} location={"Hendricks Island"} />
               <Row className="mt-3 mb-3">
                 <Col className='text-light'>
-                  <h4>Make port at 6PM</h4>
+                  <h4>Arrive by 6:00</h4>
                 </Col>
               </Row>
               <Row className="mt-3 mb-3 justify-content-md-center">
@@ -257,10 +258,10 @@ function Home() {
               </Row>
             </div>
             <div style={{marginTop: '20px'}} className='bg-success rounded border p-3'>
-              <HeaderRow contents={"ARRIVAL"} />
+              <HeaderRow contents={"ARRIVAL"} location={"Lambertville Boat Launch"} />
               <Row className="mt-3 mb-3">
                 <Col className='text-light'>
-                  <h5>Arrival by 12PM</h5>
+                  <h4>Land around 12:00</h4>
                 </Col>
               </Row>
               <Row className="mt-3 mb-3 justify-content-md-center">
@@ -318,9 +319,9 @@ function Home() {
                 </Col>
               </Row>
             </Jumbotron> */}
-            </Container>
           </>
-        }
+        {/* } */}
+    </Container>
     </div>
   );
 }
