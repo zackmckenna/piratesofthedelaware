@@ -163,20 +163,20 @@ function Home() {
                         </Accordion.Toggle>
                       </Card.Header>
                       <Accordion.Collapse eventKey="0">
-                        <Card.Body >After all equipment has been dropped off, cars should be moved from the boat launch to somewhere they can stay overnight. In the past, we have parked them on side streets in Lambertville, for easy departure on Sunday, and took UBER/LYFT back to the boat launch.</Card.Body>
+                        <Card.Body>You might get a ticket for leaving your car at Kingwood overnight, so find somewhere to stow your car after unloading.</Card.Body>
                       </Accordion.Collapse>
                     </Card>
                     <Card>
                       <Card.Header>
                         <Accordion.Toggle as={Button} variant="link" eventKey="1">
-                          Contraband
+                          Legalities
                         </Accordion.Toggle>
                       </Card.Header>
                       <Accordion.Collapse eventKey="1">
-                        <Card.Body >In order to avoid unnecessary questions and inquiry, try to keep any equipment that could be used for camping hidden. Every year there are usually Park Rangers or State Troopers keeping an eye on us or the boat launch.</Card.Body>
+                        <Card.Body>Rangers, Cops, and other law enforcement frequent the boat ramp. Camping on the islands and alcohol are prohibited, so keep try to keep it hidden while building your boat. Every boat should legally have a whistle and each person should legally have a life vest.</Card.Body>
                       </Accordion.Collapse>
                     </Card>
-                    <Card>
+                    {/* <Card>
                       <Card.Header>
                         <Accordion.Toggle as={Button} variant="link" eventKey="2">
                           Space
@@ -185,7 +185,7 @@ function Home() {
                       <Accordion.Collapse eventKey="2">
                         <Card.Body >The boat launch parking lot and area surrounding it is typically packed. Sometimes we're lucky and score open parking spots, other times we need to post up on grass and have someone wait with the car so it doesn't get ticketed. Additionally, the building area is tight.</Card.Body>
                       </Accordion.Collapse>
-                    </Card>
+                    </Card> */}
                     <Card>
                       <Card.Header>
                         <Accordion.Toggle as={Button} variant="link" eventKey="3">
@@ -193,7 +193,7 @@ function Home() {
                         </Accordion.Toggle>
                       </Card.Header>
                       <Accordion.Collapse eventKey="3">
-                        <Card.Body>As soon as your ship and crew are ready, set sail! We don't want to clog up the boat launch. We will convene on the first island visible downstream on the river, <a href="https://goo.gl/maps/apKjRFhcyhm2tDLH9">Marshall Island</a></Card.Body>
+                        <Card.Body>After your ship is built, set sail to the top tip of <a href="https://goo.gl/maps/apKjRFhcyhm2tDLH9">Marshall Island</a>, where ships will congregate before setting off as a fleet.  This frees up space at the boat launch.</Card.Body>
                       </Accordion.Collapse>
                     </Card>
                   </Accordion>
@@ -220,16 +220,16 @@ function Home() {
                         <Card.Body>To arrive at the campsite, you should navigate down the rapids between <a target="_blank" href="https://goo.gl/maps/hg7j9nvz4WTbR1bC8">Eagle Island</a> and <a target="_blank" href="https://goo.gl/maps/NFpd1AmyePXL8w5x7">Hendrick Island</a> The campsite will be on the right, midway down the island.</Card.Body>
                       </Accordion.Collapse>
                     </Card>
-                    <Card>
+                    {/* <Card>
                       <Card.Header>
                         <Accordion.Toggle as={Button} variant="link" eventKey="1">
-                          Unloading
+                          Stowing
                         </Accordion.Toggle>
                       </Card.Header>
                       <Accordion.Collapse eventKey="1">
                         <Card.Body>After you land, start the process of unloading your equipment and bringing it to the campsite. There are two inclines that you must climb to reach the campsite, so keep this in mind while packing equipment. It is also largely undeveloped so be ready to traverse through some brush.</Card.Body>
                       </Accordion.Collapse>
-                    </Card>
+                    </Card> */}
                     <Card>
                       <Card.Header>
                         <Accordion.Toggle as={Button} variant="link" eventKey="2">
@@ -247,17 +247,18 @@ function Home() {
                         </Accordion.Toggle>
                       </Card.Header>
                       <Accordion.Collapse eventKey="3">
-                        <Card.Body>The campground is on a ridge that runs down the island. You might need to clear some plants/leaves/branches for tent space. We have an area for campfires set back into the woods, with hopefully enough cover so they fires can't be seen on the adjacent riverside. Sound travels far across the river so keep this in mind while celebrating the adventure so far!</Card.Body>
+                        <Card.Body>There are two inclines you must climb to reach the campsite.  The site is on a ridge and largely undeveloped, so you’ll need to clear some plants/leaves/branches for tent space.
+We have an area for campfires set back into the woods, with hopefully enough cover so the fires can't be seen on the adjacent riverside. Sound travels far in this area, so keep it  in mind while celebrating the adventure so far!</Card.Body>
                       </Accordion.Collapse>
                     </Card>
                     <Card>
                       <Card.Header>
                         <Accordion.Toggle as={Button} variant="link" eventKey="4">
-                          Emergency Egress
+                          Island Emergencies
                         </Accordion.Toggle>
                       </Card.Header>
                       <Accordion.Collapse eventKey="4">
-                        <Card.Body>In the case of an emergency on the island, there is a boat launch about 20 minutes floating down river behind <a target="_blank" href="https://goo.gl/maps/u6bQVSaidKoGQwMx7">Prallsville Mills</a>.</Card.Body>
+                        <Card.Body>In the case of an emergency on the island, there is a boat launch about 20 minutes floating down river behind <a target="_blank" href="https://goo.gl/maps/u6bQVSaidKoGQwMx7">Prallsville Mills</a>. Previous Pirates have been stung by bees, gotten lymes and attacked by leeches, so you never know what to expect.</Card.Body>
                       </Accordion.Collapse>
                     </Card>
                   </Accordion>
@@ -272,7 +273,7 @@ function Home() {
                 </Col>
               </Row>
               <Row className="mt-3 mb-3 justify-content-md-center">
-                <Col md={6}>
+                <Col md={8}>
                   <Accordion>
                     <Card>
                       <Card.Header>
@@ -281,33 +282,13 @@ function Home() {
                         </Accordion.Toggle>
                       </Card.Header>
                       <Accordion.Collapse eventKey="0">
-                        <Card.Body>You know we're almost at the end of our journey when we see the <a target="_blank" href="https://goo.gl/maps/HoSJzocYzfAcVAAi8">New Hope-Lambertville Bridge</a> At this time you want to make sure you are on the LEFT side of the river, the side the <a target="_blank" href="https://goo.gl/maps/9BKdPZN5RgZ2a6mh6">Lambertville Boat Ramp</a> is located. At the bridge, people who moved their cars to Lambertville the day prior usually depart the ships and walk to their vehicles so they can meet us at the boat launch ready to load.</Card.Body>
-                      </Accordion.Collapse>
-                    </Card>
-                    <Card>
-                      <Card.Header>
-                        <Accordion.Toggle as={Button} variant="link" eventKey="1">
-                          The Ramp
-                        </Accordion.Toggle>
-                      </Card.Header>
-                      <Accordion.Collapse eventKey="1">
-                        <Card.Body>The <a target="_blank" href="https://goo.gl/maps/9BKdPZN5RgZ2a6mh6">Lambertville Boat Ramp</a> is typically surrounded by duck weed, so you'll probably have to walk your boat to the boat launch ramp. There are often other boats and jetskies docking and trucks launching boats. Try to move your boat from the water quickly to the grass area to the left of the boat launches' driveway.</Card.Body>
-                      </Accordion.Collapse>
-                    </Card>
-                    <Card>
-                      <Card.Header>
-                        <Accordion.Toggle as={Button} variant="link" eventKey="2">
-                          Packing Up
-                        </Accordion.Toggle>
-                      </Card.Header>
-                      <Accordion.Collapse eventKey="2">
-                        <Card.Body>This is sometimes the hardest part of the trip. It can be really hot, everyone is tired and dirty, and all your shit is wet and muddy. Disassemble and pack up your boat, just try to be wary of taking up too much space at the launch. If you used screws to assemble your vessel, REMEMBER TO BRING BACK UP BATTERIES FOR YOUR CORDLESS DRILL. Unscrewing screws by hand is not fun.</Card.Body>
+                        <Card.Body>You know we're almost at the end of our journey when we see the <a target="_blank" href="https://goo.gl/maps/HoSJzocYzfAcVAAi8">New Hope-Lambertville Bridge</a> At this time you want to make sure you are on the LEFT side of the river, the side the <a target="_blank" href="https://goo.gl/maps/9BKdPZN5RgZ2a6mh6">Lambertville Boat Ramp</a> is located. Make sure you don't miss it becuase there is a <strong>large and dangerous wingdam a little further down the river</strong>.</Card.Body>
                       </Accordion.Collapse>
                     </Card>
                     <Card>
                       <Card.Header>
                         <Accordion.Toggle as={Button} variant="link" eventKey="3">
-                          Au Revoir
+                          Dead Men Tell No Tales
                         </Accordion.Toggle>
                       </Card.Header>
                       <Accordion.Collapse eventKey="3">
