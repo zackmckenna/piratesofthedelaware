@@ -217,7 +217,7 @@ function Home() {
                         </Accordion.Toggle>
                       </Card.Header>
                       <Accordion.Collapse eventKey="0">
-                        <Card.Body>To arrive at the campsite, you should navigate down the rapids between <a target="_blank" href="https://goo.gl/maps/hg7j9nvz4WTbR1bC8">Eagle Island</a> and <a target="_blank" href="https://goo.gl/maps/NFpd1AmyePXL8w5x7">Hendrick Island</a>. The campsite will be on the right, <a target="_blank" href="https://goo.gl/maps/NFpd1AmyePXL8w5x7">midway down the island</a>midway down the island.</Card.Body>
+                        <Card.Body>To arrive at the campsite, you should navigate down the rapids between <a target="_blank" href="https://goo.gl/maps/hg7j9nvz4WTbR1bC8">Eagle Island</a> and <a target="_blank" href="https://goo.gl/maps/NFpd1AmyePXL8w5x7">Hendrick Island</a>. The campsite will be on the right, <a target="_blank" href="https://goo.gl/maps/NFpd1AmyePXL8w5x7">midway down the island</a>.</Card.Body>
                       </Accordion.Collapse>
                     </Card>
                     {/* <Card>
