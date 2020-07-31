@@ -217,7 +217,7 @@ function Home() {
                         </Accordion.Toggle>
                       </Card.Header>
                       <Accordion.Collapse eventKey="0">
-                        <Card.Body>To arrive at the campsite, you should navigate down the rapids between <a target="_blank" href="https://goo.gl/maps/hg7j9nvz4WTbR1bC8">Eagle Island</a> and <a target="_blank" href="https://goo.gl/maps/NFpd1AmyePXL8w5x7">Hendrick Island</a> The campsite will be on the right, midway down the island.</Card.Body>
+                        <Card.Body>To arrive at the campsite, you should navigate down the rapids between <a target="_blank" href="https://goo.gl/maps/hg7j9nvz4WTbR1bC8">Eagle Island</a> and <a target="_blank" href="https://goo.gl/maps/NFpd1AmyePXL8w5x7">Hendrick Island</a>. The campsite will be on the right, <a target="_blank" href="https://goo.gl/maps/NFpd1AmyePXL8w5x7">midway down the island</a>midway down the island.</Card.Body>
                       </Accordion.Collapse>
                     </Card>
                     {/* <Card>
@@ -258,7 +258,7 @@ We have an area for campfires set back into the woods, with hopefully enough cov
                         </Accordion.Toggle>
                       </Card.Header>
                       <Accordion.Collapse eventKey="4">
-                        <Card.Body>In the case of an emergency on the island, there is a boat launch about 20 minutes floating down river behind <a target="_blank" href="https://goo.gl/maps/u6bQVSaidKoGQwMx7">Prallsville Mills</a>. Previous Pirates have been stung by bees, gotten lymes and attacked by leeches, so you never know what to expect.</Card.Body>
+                        <Card.Body>In the case of an emergency on the island, there is a boat launch downstream by <a target="_blank" href="https://goo.gl/maps/u6bQVSaidKoGQwMx7">Prallsville Mills</a>. There is also the <a target="_blank" href="https://goo.gl/maps/ZegZvsxcepUkuYqY8">Virginia Forrest Recreation Area</a> which is upstream of Hendricks. Previous Pirates have been stung by bees, gotten lymes and attacked by leeches, so you never know what to expect.</Card.Body>
                       </Accordion.Collapse>
                     </Card>
                   </Accordion>
@@ -282,7 +282,7 @@ We have an area for campfires set back into the woods, with hopefully enough cov
                         </Accordion.Toggle>
                       </Card.Header>
                       <Accordion.Collapse eventKey="0">
-                        <Card.Body>You know we're almost at the end of our journey when we see the <a target="_blank" href="https://goo.gl/maps/HoSJzocYzfAcVAAi8">New Hope-Lambertville Bridge</a> At this time you want to make sure you are on the LEFT side of the river, the side the <a target="_blank" href="https://goo.gl/maps/9BKdPZN5RgZ2a6mh6">Lambertville Boat Ramp</a> is located. Make sure you don't miss it becuase there is a <strong>large and dangerous wingdam a little further down the river</strong>.</Card.Body>
+                        <Card.Body>You know we're almost at the end of our journey when we see the <a target="_blank" href="https://goo.gl/maps/HoSJzocYzfAcVAAi8">New Hope-Lambertville Bridge</a>. At this time you want to make sure you are on the LEFT side of the river, the side the <a target="_blank" href="https://goo.gl/maps/9BKdPZN5RgZ2a6mh6">Lambertville Boat Ramp</a> is located. Make sure you don't miss it because there is a <strong>large and dangerous wingdam a little further down the river</strong>.</Card.Body>
                       </Accordion.Collapse>
                     </Card>
                     <Card>
