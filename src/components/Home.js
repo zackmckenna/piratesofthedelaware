@@ -269,7 +269,7 @@ We have an area for campfires set back into the woods, with hopefully enough cov
               <HeaderRow id="arrival" contents={"ARRIVAL"} location={"Lambertville Boat Launch"} />
               <Row className="mt-3 mb-3">
                 <Col className='text-light'>
-                  <h4>Land around 12:00</h4>
+                  <h4>Land Whenever</h4>
                 </Col>
               </Row>
               <Row className="mt-3 mb-3 justify-content-md-center">
