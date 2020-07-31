@@ -7,15 +7,23 @@ import skull from '../pictures/death.png'
 import wheel from '../pictures/rudder.png'
 import sword from '../pictures/sword.png'
 
-const HeaderRow = ({ contents, location }) => {
+const HeaderRow = ({ id, contents, location }) => {
   return (
-    <Row className="mt-3 mb-3 justify-content-md-center">
+    <Row id={id} className="mb-3 justify-content-md-center">
       <Col sm={12} md={6} className="pirata rounded bg-dark p-2">
         <h1 style={{ fontSize: '4em' }} className="text-light">{contents}</h1>
         <h6 style={{ fontSize: '1.5em' }} className="rowdies text-light">{location}</h6>
       </Col>
     </Row>
   )
+}
+
+const colors = {
+  blue: '#26648E',
+  green: '#61AF25',
+  yellow: '#B5DC6C',
+  cream: '#ffE3BE',
+  red: '#E65C4F'
 }
 
 const Icon = ({ src }) => {
@@ -56,7 +64,7 @@ function Home() {
 
     {userInput !== password &&
       <>
-        <Row style={{ marginTop: '10em'}} className="mx-auto">
+        <Row style={{ marginTop: '10em' }} className="mx-auto ml-2">
           <Col className="mx-auto">
             <div className="rounded p-3 mt-3">
               <ButtonGroup size="lg" className="mb-2">
@@ -75,7 +83,7 @@ function Home() {
         </Row>
       </>
     }
-        {userInput === password &&
+        {/* {userInput === password && */}
           <>
             <Jumbotron fluid style={{ backgroundColor: "#00A7E1"}}>
                 <h1 style={{fontSize: '20vmin'}} className='rowdies text-light'>POTD</h1>
@@ -110,7 +118,7 @@ function Home() {
               <Col style={{ padding: '0px'}}>
                 <Card className='mx-auto mb-3' style={{ padding: '0', width: '18rem' }}>
                   <Card.Body style={{borderWidth: '3px'}} className='border border-info'>
-                    <Card.Title className="rowdies">SETTING SAIL</Card.Title>
+                    <Card.Title className="rowdies"><a href="#setting_sail">SETTING SAIL</a></Card.Title>
                     <Card.Text >
                       The voyage begins at <Nav.Link target="_blank" href="https://goo.gl/maps/x5Htv7hccDxTCuTP7">Kingwood Access Boat Launch</Nav.Link>
                     </Card.Text>
@@ -120,7 +128,7 @@ function Home() {
               <Col style={{ padding: '0px'}}>
                 <Card className='mx-auto mb-3' style={{ padding: '0',width: '18rem' }}>
                 <Card.Body className='border border-warning'>
-                  <Card.Title className="rowdies">PORT</Card.Title>
+                  <Card.Title className="rowdies"><a href="#port">PORT</a></Card.Title>
                   <Card.Text>
                     We camp overnight on <Nav.Link target="_blank" href="https://goo.gl/maps/NFpd1AmyePXL8w5x7">Hendrick Island</Nav.Link>
                   </Card.Text>
@@ -130,7 +138,7 @@ function Home() {
               <Col className='mx-auto justify-center' style={{ padding: '0px'}}>
                 <Card className='mx-auto mb-3' style={{ padding: '0', width: '18rem' }}>
                   <Card.Body className='border border-success'>
-                    <Card.Title className="rowdies">ARRIVAL</Card.Title>
+                    <Card.Title className="rowdies"><a href="#arrival">ARRIVAL</a></Card.Title>
                     <Card.Text>
                       The voyage ends at <Nav.Link target="_blank" href="https://goo.gl/maps/vLen4hsapc6wpdfJ7">Lambertville Boat Ramp</Nav.Link>
                     </Card.Text>
@@ -140,7 +148,7 @@ function Home() {
             </Row>
             </Jumbotron>
             <div style={{marginTop: '20px'}} className='bg-info rounded border p-3'>
-              <HeaderRow contents={'SETTING SAIL'} location={"Kingswood Access Boat Launch"}/>
+              <HeaderRow id="setting_sail" contents={'SETTING SAIL'} location={"Kingswood Access Boat Launch"}/>
               <Row className="mt-3 mb-3">
                 <Col className='text-light'>
                   <h4>Set sail at 11:00</h4>
@@ -156,7 +164,7 @@ function Home() {
                         </Accordion.Toggle>
                       </Card.Header>
                       <Accordion.Collapse eventKey="0">
-                        <Card.Body>After all equipment has been dropped off, cars should be moved from the boat launch to somewhere they can stay overnight. In the past, we have parked them on side streets in Lambertville, for easy departure on Sunday, and took UBER/LYFT back to the boat launch.</Card.Body>
+                        <Card.Body >After all equipment has been dropped off, cars should be moved from the boat launch to somewhere they can stay overnight. In the past, we have parked them on side streets in Lambertville, for easy departure on Sunday, and took UBER/LYFT back to the boat launch.</Card.Body>
                       </Accordion.Collapse>
                     </Card>
                     <Card>
@@ -166,7 +174,7 @@ function Home() {
                         </Accordion.Toggle>
                       </Card.Header>
                       <Accordion.Collapse eventKey="1">
-                        <Card.Body>In order to avoid unnecessary questions and inquiry, try to keep any equipment that could be used for camping hidden. Every year there are usually Park Rangers or State Troopers keeping an eye on us or the boat launch.</Card.Body>
+                        <Card.Body >In order to avoid unnecessary questions and inquiry, try to keep any equipment that could be used for camping hidden. Every year there are usually Park Rangers or State Troopers keeping an eye on us or the boat launch.</Card.Body>
                       </Accordion.Collapse>
                     </Card>
                     <Card>
@@ -176,7 +184,7 @@ function Home() {
                         </Accordion.Toggle>
                       </Card.Header>
                       <Accordion.Collapse eventKey="2">
-                        <Card.Body>The boat launch parking lot and area surrounding it is typically packed. Sometimes we're lucky and score open parking spots, other times we need to post up on grass and have someone wait with the car so it doesn't get ticketed. Additionally, the building area is tight.</Card.Body>
+                        <Card.Body >The boat launch parking lot and area surrounding it is typically packed. Sometimes we're lucky and score open parking spots, other times we need to post up on grass and have someone wait with the car so it doesn't get ticketed. Additionally, the building area is tight.</Card.Body>
                       </Accordion.Collapse>
                     </Card>
                     <Card>
@@ -194,7 +202,7 @@ function Home() {
               </Row>
             </div>
             <div style={{marginTop: '20px'}} className='bg-warning rounded border p-3'>
-              <HeaderRow  contents={'PORT'} location={"Hendricks Island"} />
+              <HeaderRow  id="port" contents={'PORT'} location={"Hendricks Island"} />
               <Row className="mt-3 mb-3">
                 <Col className='text-light'>
                   <h4>Arrive by 6:00</h4>
@@ -206,7 +214,7 @@ function Home() {
                     <Card>
                       <Card.Header>
                         <Accordion.Toggle as={Button} variant="link" eventKey="0">
-                          1: Landing
+                          Landing
                         </Accordion.Toggle>
                       </Card.Header>
                       <Accordion.Collapse eventKey="0">
@@ -216,7 +224,7 @@ function Home() {
                     <Card>
                       <Card.Header>
                         <Accordion.Toggle as={Button} variant="link" eventKey="1">
-                          2: Unloading
+                          Unloading
                         </Accordion.Toggle>
                       </Card.Header>
                       <Accordion.Collapse eventKey="1">
@@ -226,7 +234,7 @@ function Home() {
                     <Card>
                       <Card.Header>
                         <Accordion.Toggle as={Button} variant="link" eventKey="2">
-                          3: Stowing
+                          Stowing
                         </Accordion.Toggle>
                       </Card.Header>
                       <Accordion.Collapse eventKey="2">
@@ -236,7 +244,7 @@ function Home() {
                     <Card>
                       <Card.Header>
                         <Accordion.Toggle as={Button} variant="link" eventKey="3">
-                          4: Camp
+                          Camp
                         </Accordion.Toggle>
                       </Card.Header>
                       <Accordion.Collapse eventKey="3">
@@ -246,7 +254,7 @@ function Home() {
                     <Card>
                       <Card.Header>
                         <Accordion.Toggle as={Button} variant="link" eventKey="4">
-                          5: Emergency Egress
+                          Emergency Egress
                         </Accordion.Toggle>
                       </Card.Header>
                       <Accordion.Collapse eventKey="4">
@@ -258,7 +266,7 @@ function Home() {
               </Row>
             </div>
             <div style={{marginTop: '20px'}} className='bg-success rounded border p-3'>
-              <HeaderRow contents={"ARRIVAL"} location={"Lambertville Boat Launch"} />
+              <HeaderRow id="arrival" contents={"ARRIVAL"} location={"Lambertville Boat Launch"} />
               <Row className="mt-3 mb-3">
                 <Col className='text-light'>
                   <h4>Land around 12:00</h4>
@@ -270,7 +278,7 @@ function Home() {
                     <Card>
                       <Card.Header>
                         <Accordion.Toggle as={Button} variant="link" eventKey="0">
-                          1: The Bridge
+                          The Bridge
                         </Accordion.Toggle>
                       </Card.Header>
                       <Accordion.Collapse eventKey="0">
@@ -280,7 +288,7 @@ function Home() {
                     <Card>
                       <Card.Header>
                         <Accordion.Toggle as={Button} variant="link" eventKey="1">
-                          2: The Ramp
+                          The Ramp
                         </Accordion.Toggle>
                       </Card.Header>
                       <Accordion.Collapse eventKey="1">
@@ -290,7 +298,7 @@ function Home() {
                     <Card>
                       <Card.Header>
                         <Accordion.Toggle as={Button} variant="link" eventKey="2">
-                          3: Packing Up
+                          Packing Up
                         </Accordion.Toggle>
                       </Card.Header>
                       <Accordion.Collapse eventKey="2">
@@ -300,7 +308,7 @@ function Home() {
                     <Card>
                       <Card.Header>
                         <Accordion.Toggle as={Button} variant="link" eventKey="3">
-                          4: Au Revoir
+                          Au Revoir
                         </Accordion.Toggle>
                       </Card.Header>
                       <Accordion.Collapse eventKey="3">
@@ -320,7 +328,7 @@ function Home() {
               </Row>
             </Jumbotron> */}
           </>
-        }
+        {/* } */}
     </Container>
     </div>
   );
